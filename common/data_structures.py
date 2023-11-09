@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Graph:
     def __init__(self):
         self.graph = defaultdict(set)
@@ -7,9 +9,11 @@ class Graph:
         if u == v:
             raise ValueError("Cannot add an edge between the same vertex")
         self.graph[u].add(v)
+
     def remove_edge(self, u, v):
         if u in self.graph and v in self.graph[u]:
             self.graph[u].remove(v)
+
     def get_graph(self):
         return self.graph
 
@@ -32,6 +36,7 @@ class Queue:
 
     def __str__(self):
         return str(self.items)
+
 
 class Stack:
     def __init__(self):
